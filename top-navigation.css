@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #ff6a3e;
+  --primary-color: red;
   --menu-item-border-color: var(--primary-color);
   --contact-btn-border-height: 2px;
   --gap: 16px;
