@@ -1,28 +1,73 @@
-* body {
-  margin: 0px;
-  padding: 0px;
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.title {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center;
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: purple;
-  font-weight: bold;
+  flex-direction: column;
   align-items: center;
-  margin: 0px;
 }
 
 header {
-  background-color: yellow;
-  padding: 0px;
-  height: 60px;
-  border: 5px yellow;
-  border-radius: 40px;
+  width: 100%;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
+
+.area {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.sections {
+  flex: 1;
+  max-width: 40%;
+  padding: 20px;
+}
+
+.sections div {
+  margin-bottom: 15px;
+}
+
+.photo {
+  flex: 1;
+  max-width: 40%;
+  text-align: right;
+  padding: 20px;
+}
+.photo {
+  animation-duration: 1s;
+  animation-name: slide-in;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 .first {
-  height: 200px;
+  height: 140px;
   width: 500px;
   border: 5px pink solid;
   border-radius: 40px;
@@ -37,14 +82,25 @@ header {
   margin: 5px;
   font-weight: bold;
 }
+
+.first a {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
 .first:hover {
   background-color: white;
   color: pink;
   border: transparent;
-  transition: 0.5s;
+  transition: 0.1s;
+}
+.first a:hover {
+  color: pink;
+  background-color: white;
+  transition: 0.1s;
 }
 .second {
-  height: 200px;
+  height: 140px;
   width: 500px;
   border: 5px green solid;
   border-radius: 40px;
@@ -59,14 +115,24 @@ header {
   margin: 5px;
   font-weight: bold;
 }
+.second a {
+  color: red;
+  text-decoration: none;
+  background-color: transparent;
+}
 .second:hover {
   background-color: red;
   color: green;
   border: transparent;
-  transition: 0.5s;
+  transition: 0.1s;
+}
+.second a:hover {
+  color: green;
+  text-decoration: none;
+  background-color: transparent;
 }
 .third {
-  height: 200px;
+  height: 140px;
   width: 500px;
   border: 5px blue solid;
   border-radius: 40px;
@@ -81,15 +147,22 @@ header {
   margin: 5px;
   font-weight: bold;
 }
+.third a {
+  color: yellow;
+  text-decoration: none;
+  background-color: transparent;
+}
 .third:hover {
   background-color: yellow;
   color: blue;
   border: transparent;
   transition: 0.5s;
 }
-
-.photo img {
-  width: auto;
-  height: auto;
-  border-radius: 40px;
+.third a:hover {
+  color: blue;
+  text-decoration: none;
+  background-color: transparent;
+}
+footer {
+  font-size: 10px;
 }
